@@ -1,0 +1,107 @@
+.nav {
+    background: var(--nav-bg-color);
+    padding: 16px 0;
+    box-shadow: 0px 4px 10px var(--nav-bg-color);
+
+    &__row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__menu {
+        display: flex;
+        gap: 4px;
+    }
+
+    &__burger {
+        display: none;
+
+        @include mobile {
+            display: block;
+        }
+
+    }
+
+    &__list {
+        display: flex;
+        gap: 40px;
+        align-items: center;
+        font-family: var(--font-nav);
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.7;
+        color: var(--color-neutral);
+
+        @include mobile {
+            display: none;
+        }
+
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+    }
+
+    &__link {
+        position: relative;
+        display: inline-block;
+        font-family: var(--font-nav);
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 1.7;
+        color: #141718;
+        display: flex;
+        gap: 2px;
+        align-items: center;
+        border-radius: 8px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    &__link:hover {
+        text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+        transform: translateY(-2px);
+    }
+
+    &__btns {
+        display: flex;
+        gap: 16px;
+        align-items: center;
+    }
+
+    &__btn {
+        display: flex;
+        gap: 5px;
+        align-items: center;
+        transition: all 0.3s ease-in-out;
+
+        &--search,
+        &--user {
+            @include mobile {
+                display: none;
+            }
+        }
+    }
+
+    &__btn:hover {
+        transform: translateY(-4px);
+    }
+
+
+    &__btn--count {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+
+        border-radius: 50%;
+        background: #141718;
+
+        color: var(--yellow);
+        line-height: 20px;
+        font-size: 12px;
+        font-weight: 700;
+        text-align: center;
+    }
+
+}

@@ -1,0 +1,19 @@
+.fav-btn {
+    display: grid;
+    place-items: center;
+
+    width: 32px;
+    height: 32px;
+    padding: 6px;
+
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 8px 16px -8px rgba(15, 15, 15, 0.5);
+    transition: all 0.2s ease;
+
+
+    &:hover {
+        padding: 5px;
+        box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.2);
+    }
+}

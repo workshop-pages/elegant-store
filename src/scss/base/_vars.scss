@@ -1,0 +1,35 @@
+:root {
+	--container-width: 1184px;
+	--container-padding: 32px;
+
+	--font-main: 'Inter', sans-serif;
+	--font-accent: 'Poppins', sans-serif;
+	--font-nav: 'Space Grotesk', sans-serif;
+
+	--page-bg: #fff;
+	--text-color: #000;
+	--text-color-secondary: #121212;
+	--accent: #ac182c;
+	--yellow: #FFAB00;
+	--color-neutral: #141718;
+	--nav-bg-color: #FFC95C;
+	--text-color-descriptive: #6C7275;
+
+
+
+	--hero-section-text: var(--text-color-secondary);
+	--tagline-link: var(--yellow);
+	--color-btn: var(--color-neutral);
+	--color-card-text: var(--color-neutral);
+	--color-footer-bg: var(--color-neutral);
+
+
+	--laptop-size: 1199px;
+	--tablet-size: 959px;
+	--mobile-size: 599px;
+}
+
+.dark {
+	--page-bg: #252526;
+	--text-color: #fff;
+}

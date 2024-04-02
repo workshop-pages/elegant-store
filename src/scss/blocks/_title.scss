@@ -1,0 +1,41 @@
+.title {
+    font-family: var(--font-accent);
+    color: var(--text-color-secondary);
+    font-weight: 500;
+
+    &--h1 {
+        font-size: clamp(40px, 5vw, 80px);
+        line-height: 1.05;
+        letter-spacing: -3px;
+        color: var(--hero-section-text);
+        margin-bottom: 8px;
+        text-wrap: balance;
+
+        span {
+            color: #377DFF;
+        }
+    }
+
+    &--h2 {
+        font-size: 40px;
+        line-height: 1.1;
+        letter-spacing: -0.6px;
+        margin-right: 16px;
+
+        @include mobile {
+            font-size: 34px;
+        }
+
+    }
+
+    &--h3 {
+        font-size: 34px;
+        line-height: 1.1;
+        letter-spacing: -0.6px;
+
+        @include tablet {
+            font-size: 28px;
+        }
+
+    }
+}

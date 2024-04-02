@@ -1,0 +1,32 @@
+.timer {
+    display: flex;
+    gap: 16px;
+    text-align: center;
+    color: var(--color-neutral);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.6;
+    text-align: center;
+
+    &__box {
+        display: grid;
+        place-items: center;
+        width: 60px;
+        height: 60px;
+        background: #fefefe;
+
+        font-family: var(--font-accent);
+        font-weight: 500;
+        font-size: 34px;
+        line-height: 1.12;
+        letter-spacing: -0.6px;
+    }
+
+    &--days {}
+
+    &--hours {}
+
+    &--minutes {}
+
+    &--seconds {}
+}

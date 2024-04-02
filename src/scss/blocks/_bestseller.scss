@@ -1,0 +1,36 @@
+.bestseller {
+    padding: 48px 0 100px;
+
+    @include mobile {
+        padding: 40px 0;
+    }
+}
+
+.bestseller__title {
+    padding-bottom: 48px;
+    text-align: start;
+
+    @include mobile {
+        padding-bottom: 16px;
+        text-align: center;
+    }
+
+}
+
+.bestseller__cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(262px, 1fr));
+    gap: 48px 24px;
+
+    @include tablet {
+        grid-template-columns: repeat(auto-fit, minmax(184px, 1fr));
+        gap: 24px 12px;
+    }
+
+    @include mobile {
+        grid-template-columns: repeat(auto-fit, minmax(151px, 1fr));
+        gap: 16px 8px;
+    }
+
+
+}

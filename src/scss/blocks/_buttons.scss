@@ -1,0 +1,65 @@
+.button {
+    display: inline-block;
+    color: #fff;
+    border-radius: 8px;
+    background-color: var(--color-btn);
+    border: 2px solid var(--color-btn);
+    letter-spacing: -0.4px;
+    font-weight: 500;
+    text-align: center;
+
+
+    &--hero {
+        font-size: 18px;
+        line-height: 1.8;
+        padding: 12px 56px;
+        transition: all 0.3s ease;
+
+        @include mobile {
+            font-size: 14px;
+        }
+    }
+
+    &--arrivals {
+        font-size: 16px;
+        line-height: 1.75;
+        padding: 9px 24px;
+        width: 100%;
+        transition: all 0.3s ease;
+
+        @include mobile {
+            padding: 6px 24px;
+        }
+
+    }
+
+    &--promotion {
+        font-size: 16px;
+        line-height: 1.75;
+        padding: 6px 40px;
+        transition: all 0.3s ease;
+
+        @include tablet {
+            font-size: 14px;
+            letter-spacing: 0;
+        }
+    }
+
+    &--mobile {
+        width: 100%;
+        max-width: 295px;
+        font-size: 18px;
+        line-height: 1.8;
+        padding: 10px 0;
+        transition: all 0.3s ease;
+        margin: 20px 0;
+    }
+
+    &:hover {
+        background-color: transparent;
+        color: var(--color-btn);
+        box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.5);
+    }
+
+
+}

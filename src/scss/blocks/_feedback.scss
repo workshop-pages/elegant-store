@@ -1,0 +1,100 @@
+.feedback {
+    background-color: #E2E4E3;
+    background-image: url('../../img/feedback/feedback-bg.jpg');
+    background-size: cover;
+    background-position: center;
+
+    display: grid;
+    place-items: center;
+    padding: 101px 32px 93px;
+
+    @media screen and (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        background-image: url('./../img/feedback/feedback-bg@2x.jpg')
+    }
+
+    @include tablet {
+        background-image: none
+    }
+
+    @include mobile {
+        padding: 95px 32px;
+    }
+}
+
+.feedback__title {
+    margin-bottom: 8px;
+
+    @include mobile {
+        font-size: 28px !important;
+    }
+}
+
+.feedback__text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.7;
+    text-align: center;
+    color: var(--text-color-secondary);
+    margin-bottom: 32px;
+
+    @include mobile {
+        font-size: 14px;
+    }
+}
+
+.feedback__form {
+    display: flex;
+    text-align: center;
+    gap: 8px;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.75;
+    letter-spacing: -0.4px;
+    color: var(--text-color-descriptive);
+
+    padding: 12px 0;
+    border-bottom: 2px solid rgba(108, 114, 117, 0.5);
+}
+
+.feedback__input {
+    color: var(--text-color);
+    width: 396px;
+
+    &::placeholder {
+        color: tr var(--text-color-descriptive);
+    }
+
+    @include mobile {
+        width: 220px;
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .feedback__submit {
+        transition: transform 0.2s ease-in-out;
+
+        &:hover {
+            color: var(--text-color);
+            transform: translateY(-5px);
+        }
+    }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    border: none;
+    -webkit-text-fill-color: var(--text-color);
+    ;
+    -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+    transition: background-color 5000s ease-in-out 0s;
+}

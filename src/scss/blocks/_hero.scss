@@ -1,0 +1,76 @@
+.hero {
+    height: 720px;
+    background-color: rgb(255, 171, 0, 0.64);
+    background-image: url('./../img/hero/header-image-bg.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @media screen and (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        background-image: url('./../img/hero/header-image-bg@2x.jpg')
+    }
+
+    @include tablet {
+        height: 540px;
+    }
+
+    @include mobile {
+        height: 642px;
+        background-position: bottom;
+        background-image: url('./../img/hero/header-image-bg-mbl.jpg');
+
+        @media screen and (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: url('./../img/hero/header-image-bg-mbl@2x.jpg')
+        }
+    }
+
+    &__container {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding-left: calc((100% - var(--container-width)) / 2 + var(--container-width)/2);
+        padding-right: calc((100% - var(--container-width)) / 2);
+
+        @include tablet {
+            padding-right: var(--container-padding);
+        }
+
+        @include mobile {
+            padding: 40px var(--container-padding);
+            display: flex;
+            align-items: start;
+            justify-content: center;
+            text-align: center;
+        }
+
+    }
+
+    &__content {}
+
+    &__titel {
+        max-width: 100%;
+
+        @include mobile {
+            max-width: 375px;
+        }
+
+    }
+
+    &__desc {
+        font-size: 20px;
+        line-height: 1.6;
+        margin-bottom: 28px;
+        color: var(--text-color-secondary);
+
+        @include mobile {
+            font-size: 16px;
+            margin-bottom: 16px;
+        }
+
+    }
+}

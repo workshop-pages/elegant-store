@@ -1,0 +1,76 @@
+.tagline {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 15px;
+    background-color: #141718;
+    font-family: var(--font-main);
+    font-size: 14px;
+    transition: all 0.3s ease;
+
+    &:hover {
+        gap: 16px;
+    }
+
+    &__desc {
+        color: #FFFFFF;
+        font-weight: 600;
+        line-height: 1.6;
+
+        @include mobile {
+            font-size: 12px;
+        }
+    }
+
+    &__arrow {
+        color: var(--tagline-link);
+        font-weight: 500;
+        line-height: 1.6;
+        display: flex;
+        gap: 4px;
+        align-items: center;
+        border-bottom: 1px solid var(--tagline-link);
+
+        @include mobile {
+            display: none;
+        }
+
+    }
+
+    &__close {
+        position: absolute;
+        right: 16px;
+        top: 10px;
+        left: auto;
+        bottom: auto;
+        z-index: 9;
+
+        svg {
+            fill: #343839;
+            transition: all 0.2s ease;
+
+            @include mobile {
+                fill: #FFFFFF;
+            }
+
+        }
+
+        &:hover {
+            svg {
+                fill: #FFFFFF;
+                transform-origin: center;
+                transform: rotate(90deg);
+            }
+        }
+    }
+
+    &__link {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+    }
+}

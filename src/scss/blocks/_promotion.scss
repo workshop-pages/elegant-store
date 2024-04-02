@@ -1,0 +1,116 @@
+.promotion {
+    position: relative;
+    background-color: rgb(255, 171, 0, 0.4);
+
+    &::after {
+        content: "";
+        display: block;
+        width: 50%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-image: url('./../img/promotion/promotion-img.jpg');
+        background-position: center;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        @media (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi) {
+            background-image: url('./../img/promotion/promotion-img@2x.jpg');
+        }
+
+        @include mobile {
+            position: static;
+            height: 367px;
+            width: 100%;
+        }
+
+    }
+
+    &__container {
+        padding-left: calc((100% - var(--container-width)) / 2 + var(--container-width)/2);
+        padding-right: calc((100% - var(--container-width)) / 2);
+
+        @include tablet {
+            padding-right: var(--container-padding);
+        }
+
+        @include mobile {
+            padding-right: var(--container-padding);
+            padding-left: var(--container-padding);
+        }
+
+    }
+
+    &__content {
+        display: grid;
+        gap: 24px;
+        padding: 100px 0;
+        padding-left: 72px;
+        flex-basis: 50%;
+        height: min-content;
+        justify-content: left;
+
+        @include tablet {
+            padding: var(--container-padding);
+        }
+
+        @include mobile {
+            padding: 28px 0;
+            justify-content: center;
+        }
+
+    }
+
+    &__desc {
+        display: grid;
+        gap: 16px;
+    }
+
+    &__tagline {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1;
+        text-transform: uppercase;
+        color: #377dff;
+    }
+
+    &__title {
+        font-family: var(--font-accent);
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 1.1;
+        letter-spacing: -0.4px;
+        color: var(--text-color-secondary);
+
+        @include tablet {
+            font-size: 34px;
+        }
+
+    }
+
+    &__text {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 1.6;
+        color: var(--text-color-secondary);
+
+        @include tablet {
+            font-size: 14px;
+        }
+    }
+
+    &__timer {
+        display: grid;
+        gap: 12px;
+    }
+
+    &__expires {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.6;
+        color: var(--color-neutral);
+    }
+}
